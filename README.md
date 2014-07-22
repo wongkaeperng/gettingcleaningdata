@@ -34,7 +34,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 	extract_features <- subset(features_data,  grepl("(mean\\(\\)|std\\(\\))", features_data$V2) )  
 	
-	x_test = x_test[,extract_features$V1] 
+	x_test = x_test[,extract_features$V1]  
 	x_train = x_train[,extract_features$V1]
 	 	
 4. Merge the test and train dataset activity labels:  
@@ -42,7 +42,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 	y_test_labels <- merge(y_test,activity_labels,by="V1")
 
 5. Combined the test and train data:  
-	train_data <- cbind(subject_train,y_train_labels,x_train)
+	train_data <- cbind(subject_train,y_train_labels,x_train)  
 	test_data <- cbind(subject_test,y_test_labels,x_test)  
 
 6. Set the column headers accordingly:  
