@@ -10,7 +10,7 @@ downloadData <- function() {
 
 #load Data
 loadData <- function(){
-      #downloadData()      
+      downloadData()      
       
       # Read test data
       x_test <- read.table("./UCI HAR Dataset/test/X_test.txt",header=FALSE,sep="")
